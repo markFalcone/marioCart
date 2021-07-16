@@ -31,6 +31,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
         startingPointKartView4 = kart4.center
         
     }
+    
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
     return true
     }
@@ -43,6 +44,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
         // force unwraping the view
         let kartView = sender.view!
         // seting the kart to the location of the users finger
+        //kartView.transform = CGAffineTransformMakeScale(1.1,1.1)
         kartView.center = location
     }
     @IBAction func didPintchKartView(_ sender: UIPinchGestureRecognizer) {
